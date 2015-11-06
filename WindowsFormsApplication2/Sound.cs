@@ -52,7 +52,7 @@ namespace WindowsFormsApplication2
             newStream.Write(data, 0, data.Length);
             newStream.Close();
             HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse();
-            StreamReader reader = new StreamReader(myResponse.GetResponseStream(), Encoding.Default);
+            StreamReader reader = new StreamReader(myResponse.GetResponseStream(), Encoding.UTF8);
             string result = reader.ReadToEnd();
             return result;
         }

@@ -43,7 +43,7 @@ namespace WindowsFormsApplication2
                 byte[] utf81 = utf8.GetBytes(jsonTemp2);
                 byte[] gb2312b = Encoding.Convert(utf8, gb2312, utf81);
                // string jsonFinal = sound.jsonReader(jsonTemp2);
-                textBox1.Text += gb2312.GetString(gb2312b);
+                textBox1.Text += jsonTemp2;
             }
 
 
