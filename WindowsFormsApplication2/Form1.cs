@@ -19,7 +19,7 @@ namespace WindowsFormsApplication2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile=new OpenFileDialog();
+/*            OpenFileDialog openFile=new OpenFileDialog();
             openFile.Filter = "mp3音频|*.mp3|wma音频|*.wma|3gpp音频|*.3gpp";
             Base64 be=new Base64();
             byte[] bytes;
@@ -29,7 +29,11 @@ namespace WindowsFormsApplication2
                 string result = be.mp3Convert2Binary(bytes);
                 textBox1.Text = result;
 
-            }
+            }*/
+            AccessKey access=new AccessKey();
+            string json = access.JsonBuild();
+            string jsonTemp = access.JsonPost();
+            textBox1.Text=jsonTemp+"\r\n"+access.jsonReader(jsonTemp);
         }
     }
 }
